@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt & Pants Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fashion Store 6 Star</h1>
+    </header>
+
+    <main>
+        <h2>Available Products</h2>
+        <section id="products">
+            
+            <div class="product">
+                <img src="images/girl tshirt1.jpg" alt="T-Shirt">
+                <h3>Stylish Top Shirt For Girls</h3>
+                <p>Price: ₹1100</p>
+                <button onclick="addToCart('T-Shirt', 1100)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/girl tshirt2.jpg" alt="T-Shirt">
+                <h3>Trendy T-Shirt </h3>
+                <p>Price: ₹600</p>
+                <button onclick="addToCart('T-Shirt', 600)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/boy tshirt.jpg" alt="T-Shirt">
+                <h3>Gareebo ka sasta shirt</h3>
+                <p>Price: ₹300</p>
+                <button onclick="addToCart('T-Shirt', 300)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/boy pant.png" alt="Pants">
+                <h3>Chor bazaar ka pant</h3>
+                <p>Price: ₹800</p>
+                <button onclick="addToCart('Pants', 800)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/girl pant.png" alt="Pants">
+                <h3>Comfortable Stylish Jeans Pants</h3>
+                <p>Price: ₹900</p>
+                <button onclick="addToCart('Pants', 900)">Add to Cart</button>
+            </div>
+        </section>
+
+      <section id="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total: ₹0</p>
+        </section>
+
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <form id="checkout-form" onsubmit="placeOrder(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br>
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea><br>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" required><br>
+                <label for="payment">Payment Mode:</label>
+                <select id="payment">
+                    <option value="cod">Cash on Delivery</option>
+                </select><br>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+
+        <section id="confirmation" style="display: none;">
+            <h2>Order Successful!</h2>
+            <p>Your order has been placed successfully.</p>
+            <p>Thank you for shopping with us!</p>
+            <p id="receipt"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
